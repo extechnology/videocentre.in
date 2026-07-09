@@ -4,6 +4,8 @@ import { Reveal } from "../../animations/Reveal";
 import { X } from "lucide-react";
 import { galleries } from "../../data/galleries";
 
+
+
 const Gallery = ({
   current,
   active,

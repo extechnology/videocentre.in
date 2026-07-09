@@ -8,6 +8,7 @@ import Navbar from "./components/shared/Navbar";
 import Footer from "./components/shared/Footer";
 import ScrollToTop from "./components/shared/ScrollToTop";
 
+
 const HomePage = lazy(() => import("./pages/HomePage"));
 const ContactPage = lazy(() => import("./pages/ContactPage"));
 const NotFound = lazy(() => import("./pages/NotFound"));
