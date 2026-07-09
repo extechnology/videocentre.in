@@ -4,6 +4,8 @@ import { Reveal } from "../../animations/Reveal";
 import { X } from "lucide-react";
 import { galleries } from "../../data/galleries";
 
+
+
 const Gallery = ({
   current,
   active,
@@ -60,7 +62,7 @@ const Gallery = ({
         ) : (
           <div
             key={active}
-            className="columns-1 gap-5 sm:columns-2 lg:columns-3 [column-fill:_balance]"
+            className="columns-1 gap-5 sm:columns-2 lg:columns-3 [column-fill:balance]"
           >
             {current.map((url, i) => (
               <Reveal
@@ -73,7 +75,7 @@ const Gallery = ({
                     src={url}
                     alt=""
                     loading="lazy"
-                    className="block w-full transition-transform duration-[900ms] ease-out group-hover:scale-[1.03]"
+                    className="block w-full transition-transform duration-900 ease-out group-hover:scale-[1.03]"
                   />
                   <button
                     onClick={() => remove(url)}

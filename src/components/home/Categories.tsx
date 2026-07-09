@@ -19,20 +19,20 @@ const Categories = ({ active, selectCategory }: { active: Category; selectCatego
                       : ""
                   }`}
                 >
-                  <div className="aspect-[3/4] w-full overflow-hidden bg-muted">
+                  <div className="aspect-3/4 w-full overflow-hidden bg-muted">
                     <img
                       src={c.cover}
                       alt={c.title}
                       loading="lazy"
-                      className="h-full w-full object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-[1.06]"
+                      className="h-full w-full object-cover transition-transform duration-1200 ease-out group-hover:scale-[1.06]"
                     />
                   </div>
-                  <div className="absolute inset-0 bg-gradient-to-t from-foreground/60 via-foreground/10 to-transparent opacity-90" />
+                  <div className="absolute inset-0 bg-linear-to-t from-foreground/60 via-foreground/10 to-transparent opacity-90" />
                   <div className="absolute inset-x-0 bottom-0 p-6 text-background">
-                    <p className="text-[0.65rem] uppercase tracking-[0.3em] opacity-80">
+                    <p className="text-[0.65rem] text-white uppercase tracking-[0.3em] opacity-80">
                       {c.subtitle}
                     </p>
-                    <h3 className="font-display mt-2 text-3xl tracking-wide">
+                    <h3 className="font-display text-white mt-2 text-3xl tracking-wide">
                       {c.title}
                     </h3>
                   </div>
