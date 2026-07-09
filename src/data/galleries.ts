@@ -2,7 +2,7 @@
 
 
 
-type Category = "weddings" | "travel" | "portraits";
+export type Category = "weddings" | "travel" | "portraits";
 
 export const galleries: Record<Category, string[]> = {
   weddings: [

@@ -1,7 +1,8 @@
 import { Reveal } from "../../animations/Reveal";
 import { categories } from "../../data/categories";
+import type { Category } from "../../data/categories";
 
-const Categories = ({ active, selectCategory }: any) => {
+const Categories = ({ active, selectCategory }: { active: Category; selectCategory: (id: Category) => void; }) => {
   return (
     <div>
       <section id="portfolio" className="mx-auto max-w-7xl px-5 sm:px-8">

@@ -4,10 +4,22 @@ import { Reveal } from "../../animations/Reveal";
 import { X } from "lucide-react";
 import { galleries } from "../../data/galleries";
 
-const Gallery = ({ current, active, galleryRef, remove }: { current: string[]; active: Category; galleryRef: any; remove: (url: string) => void; }) => {
-    const [images, setImages] = useState<Record<Category, string[]>>(galleries);
-  
-    return (
+const Gallery = ({
+  current,
+  active,
+  galleryRef,
+  remove,
+}: {
+  current: string[];
+  active: Category;
+  galleryRef: React.RefObject<HTMLElement | null>;
+  remove: (url: string) => void;
+}) => {
+  const [images, setImages] = useState<Record<Category, string[]>>(galleries);
+
+  console.log(images);
+
+  return (
     <div>
       <section
         ref={galleryRef}
@@ -78,6 +90,6 @@ const Gallery = ({ current, active, galleryRef, remove }: { current: string[]; a
       </section>
     </div>
   );
-}
+};
 
 export default Gallery
