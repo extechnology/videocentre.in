@@ -3,7 +3,7 @@ import { Reveal } from "../../animations/Reveal"
 
 const Hero = () => {
   return (
-      <section className="mx-auto max-w-7xl px-5 pt-16 pb-10 text-center sm:px-8 sm:pt-24">
+      <section className="mx-auto max-w-7xl px-5 pt-16 pb-8 text-center sm:px-8 sm:pt-12">
         <Reveal>
           <p className="text-xs uppercase tracking-[0.35em] text-muted-foreground">
             Portfolio

@@ -5,19 +5,20 @@ import Hero from "../components/home/Hero";
 import Categories from "../components/home/Categories";
 import Gallery from "../components/home/Gallery";
 import AboutStrip from "../components/home/AboutStrip";
+import type { Gallery as GalleryType } from "../data/galleries";
 
 const HomePage = () => {
   const [active, setActive] = useState<Category>("weddings");
-  const [images, setImages] = useState<Record<Category, string[]>>(galleries);
+  const [images, setImages] = useState<GalleryType[]>(galleries);
   const galleryRef = useRef<HTMLDivElement>(null);
-
-  const current = useMemo(() => images[active], [images, active]);
-
-  const remove = (url: string) => {
-    setImages((prev) => ({
-      ...prev,
-      [active]: prev[active].filter((u) => u !== url),
-    }));
+  const current = useMemo(() => images?.filter((image)=> image?.category === active), [images, active]);
+  const remove = (id: number) => {
+    setImages((prev) => {
+      return {
+        ...prev,
+        [active]: prev[active].filter((u) => u.id !== id),
+      }
+    });
   };
 
   const selectCategory = (id: Category) => {
