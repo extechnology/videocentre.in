@@ -1,11 +1,12 @@
 import { Play } from "lucide-react";
+import { Link } from "react-router-dom";
 
 
 const Footer = () => {
   return (
       <footer
         id="contact"
-        className="mt-24 border-t border-border bg-secondary/40"
+        className="mt-5 border-t border-border bg-secondary/40"
       >
         <div className="mx-auto grid max-w-7xl gap-10 px-5 py-16 sm:px-8 md:grid-cols-3">
           <div>
@@ -28,19 +29,19 @@ const Footer = () => {
             </h4>
             <ul className="mt-4 space-y-2 text-sm">
               <li>
-                <a className="story-link" href="#portfolio">
-                  Portfolio
-                </a>
+                <Link className="story-link" to="/">
+                  Home
+                </Link>
               </li>
               <li>
-                <a className="story-link" href="#about">
+                <Link className="story-link" to="/about">
                   About
-                </a>
+                </Link>
               </li>
               <li>
-                <a className="story-link" href="#contact">
+                <Link className="story-link" to="/contact">
                   Contact
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

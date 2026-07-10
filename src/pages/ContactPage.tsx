@@ -106,13 +106,13 @@ const ContactPage = () => {
         </div>
 
         {/* Form */}
-        <div className="rounded-3xl border border-border bg-card p-8 shadow-sm md:p-10">
+        <div className="rounded-lg border border-border bg-card p-5 shadow-sm md:p-8">
 
           <h2 className="font-display text-3xl">
             Send a Message
           </h2>
 
-          <form className="mt-10 space-y-6">
+          <form className="mt-10 space-y-4">
 
             <div>
               <label className="mb-2 block text-sm">
@@ -122,7 +122,7 @@ const ContactPage = () => {
               <input
                 type="text"
                 placeholder="John Doe"
-                className="w-full rounded-xl border border-border bg-background px-4 py-3 outline-none transition focus:border-primary"
+                className="w-full rounded-xl border border-border bg-background px-4 py-2 outline-none transition focus:border-primary"
               />
             </div>
 
@@ -134,7 +134,7 @@ const ContactPage = () => {
               <input
                 type="email"
                 placeholder="john@example.com"
-                className="w-full rounded-xl border border-border bg-background px-4 py-3 outline-none transition focus:border-primary"
+                className="w-full rounded-xl border border-border bg-background px-4 py-2 outline-none transition focus:border-primary"
               />
             </div>
 
@@ -156,14 +156,14 @@ const ContactPage = () => {
               </label>
 
               <textarea
-                rows={6}
+                rows={4}
                 placeholder="Tell us about your project..."
-                className="w-full rounded-xl border border-border bg-background px-4 py-3 outline-none transition focus:border-primary"
+                className="w-full rounded-xl border border-border bg-background px-4 py-2 outline-none transition focus:border-primary"
               />
             </div>
 
             <button
-              className="inline-flex items-center gap-3 rounded-full bg-primary px-8 py-3 text-primary-foreground transition hover:scale-[1.02]"
+              className="inline-flex items-center gap-3 rounded-full bg-primary px-8 py-2 text-primary-foreground transition hover:scale-[1.02]"
             >
               <Send className="h-4 w-4" />
               Send Message
