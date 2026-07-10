@@ -9,7 +9,7 @@ const Navbar = () => {
     <header className="sticky top-0 z-50 border-b border-border/60 bg-background/90 backdrop-blur-xl shadow-sm">
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6 lg:px-8">
         {/* Logo */}
-        <a href="#top" className="flex items-center gap-3">
+        <Link to="/" className="flex items-center gap-3">
           <div className="flex h-11 w-11 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-lg">
             <Play className="h-5 w-5 fill-current" />
           </div>
@@ -17,23 +17,23 @@ const Navbar = () => {
           <h1 className="font-display text-2xl tracking-wide">
             Video <span className="text-primary">Center</span>
           </h1>
-        </a>
+        </Link>
 
         {/* Desktop Navigation */}
         <nav className="hidden items-center gap-10 md:flex">
-          <a
-            href="#top"
+          <Link
+            to="/"
             className="relative text-sm uppercase tracking-[0.2em] text-muted-foreground transition hover:text-foreground after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-primary after:transition-all hover:after:w-full"
           >
             Home
-          </a>
+          </Link>
 
-          <a
-            href="#about"
+          <Link
+            to="/about"
             className="relative text-sm uppercase tracking-[0.2em] text-muted-foreground transition hover:text-foreground after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-primary after:transition-all hover:after:w-full"
           >
             About
-          </a>
+          </Link>
 
           <Link
             to="/contact"
