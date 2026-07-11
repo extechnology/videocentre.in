@@ -20,9 +20,6 @@ const Gallery = ({
   // const [images, setImages] = useState<GalleryType[]>(galleries);
   const navigate = useNavigate();
 
-  console.log(current, "in gallery section current");
-  console.log(active, "in gallery section active");
-  console.log(galleryRef, "in gallery section galleryRef");
 
   return (
     <div>

@@ -11,7 +11,10 @@ const HomePage = () => {
   const [active, setActive] = useState<Category>("weddings");
   // const [images, setImages] = useState<GalleryType[]>(galleries);
   const galleryRef = useRef<HTMLDivElement>(null);
-  const current = useMemo(() => galleries?.filter((image)=> image?.category === active), [galleries, active]);
+  const current = useMemo(
+    () => galleries?.filter((image) => image?.category === active),
+    [active],
+  );
   // const remove = (id: number) => {
   //   setImages((prev) => {
   //     return {
@@ -34,16 +37,13 @@ const HomePage = () => {
   return (
     <div>
       <Hero />
-      <Categories 
-      active={active}
-      selectCategory={selectCategory}
-      />
+      <Categories active={active} selectCategory={selectCategory} />
       <Gallery
-      current={current}
-      active={active}
-      galleryRef={galleryRef}
-      // remove={remove}
-       />
+        current={current}
+        active={active}
+        galleryRef={galleryRef}
+        // remove={remove}
+      />
       <AboutStrip />
     </div>
   );
