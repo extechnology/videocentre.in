@@ -1,8 +1,8 @@
-import { useState } from "react";
+// import { useState } from "react";
 import type { Category } from "../../data/categories";
 import { Reveal } from "../../animations/Reveal";
 // import { X } from "lucide-react";
-import { galleries } from "../../data/galleries";
+// import { galleries } from "../../data/galleries";
 import type { Gallery as GalleryType } from "../../data/galleries";
 import { useNavigate } from "react-router-dom";
 
@@ -15,11 +15,10 @@ const Gallery = ({
   current: GalleryType[];
   active: Category;
   galleryRef: React.RefObject<HTMLElement | null>;
-  remove: (id: number) => void;
+  // remove: (id: number) => void;
 }) => {
-  const [images, setImages] = useState<GalleryType[]>(galleries);
+  // const [images, setImages] = useState<GalleryType[]>(galleries);
   const navigate = useNavigate();
-  console.log(images,"in gallery section");
 
   console.log(current, "in gallery section current");
   console.log(active, "in gallery section active");
@@ -52,14 +51,14 @@ const Gallery = ({
             <div className="rounded-md border border-dashed border-border py-24 text-center text-muted-foreground">
               You've removed every image in this collection.
               <div className="mt-4">
-                <button
+                {/* <button
                   onClick={() =>
                     setImages((p) => ({ ...p, [active]: galleries[active] }))
                   }
                   className="rounded-full border border-primary/40 px-5 py-2 text-xs uppercase tracking-[0.2em] text-primary transition-colors hover:bg-primary hover:text-primary-foreground"
                 >
                   Restore
-                </button>
+                </button> */}
               </div>
             </div>
           </Reveal>

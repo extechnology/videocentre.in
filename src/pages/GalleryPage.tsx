@@ -22,11 +22,11 @@ const GalleryPage = () => {
           <div className="absolute inset-0 bg-black/0 transition-all duration-500 group-hover:bg-black/20" />
 
           {/* View icon */}
-          <div className="absolute bottom-5 left-5 translate-y-4 opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
+          {/* <div className="absolute bottom-5 left-5 translate-y-4 opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
             <span className="border border-white/60 bg-black/30 px-4 py-2 text-xs uppercase tracking-[0.25em] text-white backdrop-blur-sm">
               View
             </span>
-          </div>
+          </div> */}
         </div>
       ))}
     </div>
