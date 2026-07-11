@@ -12,6 +12,7 @@ import ScrollToTop from "./components/shared/ScrollToTop";
 const HomePage = lazy(() => import("./pages/HomePage"));
 const ContactPage = lazy(() => import("./pages/ContactPage"));
 const NotFound = lazy(() => import("./pages/NotFound"));
+const GalleryPage = lazy(() => import("./pages/GalleryPage"));
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/contact" element={<ContactPage />} />
+          <Route path="/gallery/:id" element={<GalleryPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Suspense>

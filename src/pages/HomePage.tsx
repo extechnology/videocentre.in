@@ -5,20 +5,24 @@ import Hero from "../components/home/Hero";
 import Categories from "../components/home/Categories";
 import Gallery from "../components/home/Gallery";
 import AboutStrip from "../components/home/AboutStrip";
+// import type { Gallery as GalleryType } from "../data/galleries";
 
 const HomePage = () => {
   const [active, setActive] = useState<Category>("weddings");
-  const [images, setImages] = useState<Record<Category, string[]>>(galleries);
+  // const [images, setImages] = useState<GalleryType[]>(galleries);
   const galleryRef = useRef<HTMLDivElement>(null);
-
-  const current = useMemo(() => images[active], [images, active]);
-
-  const remove = (url: string) => {
-    setImages((prev) => ({
-      ...prev,
-      [active]: prev[active].filter((u) => u !== url),
-    }));
-  };
+  const current = useMemo(
+    () => galleries?.filter((image) => image?.category === active),
+    [active],
+  );
+  // const remove = (id: number) => {
+  //   setImages((prev) => {
+  //     return {
+  //       ...prev,
+  //       [active]: prev[active].filter((u:GalleryType) => u.id !== id),
+  //     }
+  //   });
+  // };
 
   const selectCategory = (id: Category) => {
     setActive(id);
@@ -33,16 +37,13 @@ const HomePage = () => {
   return (
     <div>
       <Hero />
-      <Categories 
-      active={active}
-      selectCategory={selectCategory}
-      />
+      <Categories active={active} selectCategory={selectCategory} />
       <Gallery
-      current={current}
-      active={active}
-      galleryRef={galleryRef}
-      remove={remove}
-       />
+        current={current}
+        active={active}
+        galleryRef={galleryRef}
+        // remove={remove}
+      />
       <AboutStrip />
     </div>
   );
