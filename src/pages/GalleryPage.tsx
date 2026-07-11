@@ -5,7 +5,7 @@ const GalleryPage = () => {
   const gallery = galleries.find((gallery) => gallery.id === Number(id));
   console.log(gallery, "in gallery page");
   return (
-    <div className="columns-1 gap-5 space-y-5 sm:columns-2 lg:columns-3 xl:columns-4">
+    <div className="columns-1 gap-4 space-y-5 sm:columns-2 lg:columns-3 xl:columns-4 px-5 py-6">
       {gallery?.gallery.map((image, index) => (
         <div
           key={index}
@@ -15,7 +15,7 @@ const GalleryPage = () => {
             src={image}
             alt={`${gallery.title} ${index + 1}`}
             loading="lazy"
-            className="w-full object-cover transition-all duration-700 group-hover:scale-105 group-hover:brightness-90"
+            className="w-full object-cover rounded-md transition-all duration-700 group-hover:scale-105 group-hover:brightness-90"
           />
 
           {/* Overlay */}
